@@ -3,6 +3,6 @@ module.exports = defineConfig({
   pwa: {
     workboxPluginMode: "GenerateSW",
   },
-  base: "/SpellTome/",
+  publicPath: process.env.NODE_ENV === "production" ? "/SpellTome/" : "/",
   transpileDependencies: true,
 });
