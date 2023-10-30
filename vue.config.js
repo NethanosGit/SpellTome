@@ -3,5 +3,6 @@ module.exports = defineConfig({
   pwa: {
     workboxPluginMode: "GenerateSW",
   },
+  base: "/SpellTome/",
   transpileDependencies: true,
 });
