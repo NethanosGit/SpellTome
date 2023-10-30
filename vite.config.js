@@ -9,7 +9,7 @@ export default defineConfig({
   pwa: {
     workboxPluginMode: "GenerateSW",
   },
-  base: "/SpellTome",
+  base: "/SpellTome/",
   transpileDependencies: true,
   plugins: [
     vue(),
