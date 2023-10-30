@@ -1,0 +1,8 @@
+{
+  "name": "Spells Tome",
+  "short_name": "Spells Tome",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1F1814",
+  "theme_color": "#1F1814"
+}
