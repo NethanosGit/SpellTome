@@ -3,8 +3,8 @@
   "short_name": "Spells Tome",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#000000",
+  "background_color": "#1b1b1b",
+  "theme_color": "#1b1b1b",
   "icons": [
     {
       "src": "./img/icons/android-chrome-maskable-192x192.png",
