@@ -3,8 +3,6 @@ module.exports = defineConfig({
   pwa: {
     workboxPluginMode: "GenerateSW",
     name: "Spells Tome",
-    themeColor: "#1F1814",
-    msTileColor: "#1F1814",
   },
 
   publicPath: process.env.NODE_ENV === "production" ? "/SpellTome/" : "/",
