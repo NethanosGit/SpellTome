@@ -1,11 +1,8 @@
 <template>
   <v-container class="w-100 d-flex-inline">
-    <v-row class="pt-2">
-      <h2 class="text-brownish">Spells</h2>
-    </v-row>
     <v-row class="faded-background w-auto d-flex justify-center">
       <v-divider
-        :thickness="3"
+        :thickness="2"
         class="border-opacity-100"
         color="red"
       ></v-divider>
@@ -14,7 +11,6 @@
         v-model="selectedClass"
         class="ma-0"
         multiple
-        show-arrows
       >
         <v-slide-group-item
           v-for="dndClass in classes"
@@ -24,110 +20,27 @@
           <v-btn
             :color="isSelected ? '#312721' : 'transparent'"
             elevation="0"
-            class="pa-0 h-auto rounded-2"
+            class="pa-0 ma-0 h-auto rounded-2"
             :border="false"
             @click="toggle"
           >
-            <v-col class="d-flex flex-column h-auto align-center"
+            <v-col class="pa-0 ma-0 d-flex flex-column h-auto align-center"
               ><img
                 class="class-filter-icon"
                 v-bind:src="'./img/classes/' + dndClass + '-icon.png'"
               />
-              <div class="text-brownish">
+              <div class="text-brownish text-size-12">
                 {{ dndClass }}
               </div>
             </v-col>
           </v-btn>
         </v-slide-group-item>
       </v-slide-group>
-    </v-row>
-    <v-row class="faded-background">
-      <v-form class="w-100">
-        <v-container>
-          <v-row class="d-flex flex-row justify-space-evenly">
-            <v-col cols="5" md="2" class="mb-3 pa-0">
-              <v-text-field
-                label="Spell Name"
-                variant="outlined"
-                density="compact"
-                bg-color="white"
-                clearable="true"
-                hide-details
-              ></v-text-field>
-            </v-col>
-            <v-col cols="5" md="2" class="mb-3 pa-0">
-              <v-text-field
-                label="Spell Level"
-                variant="outlined"
-                density="compact"
-                bg-color="white"
-                clearable="true"
-                hide-details
-              ></v-text-field>
-            </v-col>
-            <v-col cols="5" md="2" class="mb-3 pa-0">
-              <v-text-field
-                label="School"
-                variant="outlined"
-                density="compact"
-                bg-color="white"
-                clearable="true"
-                hide-details
-              ></v-text-field>
-            </v-col>
-            <v-col cols="5" md="2" class="mb-3 pa-0">
-              <v-text-field
-                label="Damage Type"
-                variant="outlined"
-                density="compact"
-                bg-color="white"
-                clearable="true"
-                hide-details
-              ></v-text-field>
-            </v-col>
-            <v-col cols="3" md="1" class="mb-3 pa-0">
-              <v-btn width="150" class="h-100">Apply Filters</v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-form>
-    </v-row>
-    <v-row>
-      <v-container>
-        <v-row class="text-brownish">
-          <v-col class="v-col-auto text-transparent">---------------</v-col>
-          <v-col class="v-col-auto">Level</v-col>
-          <v-col class="v-col-3">Name</v-col>
-          <v-col class="v-col-2">Casting Time</v-col>
-          <v-col class="v-col-1">Duration</v-col>
-          <v-col class="v-col-auto">Range/Area</v-col>
-          <v-col class="v-col-auto">Attack/Save</v-col>
-          <v-col class="v-col-auto">Damage/Effect</v-col>
-        </v-row>
-        <v-row>
-          <v-expansion-panels class="text-brownish">
-            <v-expansion-panel
-              bg-color="transparent"
-              rounded="false"
-              class="dnd-background"
-              variant="compact"
-              elevation="0"
-            >
-              <v-expansion-panel-title>
-                <v-row class="w-100">
-                  <v-col class="w-auto">
-                    <img
-                      class="spell-icon"
-                      v-bind:src="'./img/spells/eldritchblast.png'"
-                    />
-                  </v-col>
-                  <v-col class="w-auto"> Eldritch Blast </v-col>
-                </v-row>
-              </v-expansion-panel-title>
-            </v-expansion-panel>
-          </v-expansion-panels>
-        </v-row>
-      </v-container>
+      <v-divider
+        :thickness="2"
+        class="border-opacity-100"
+        color="red"
+      ></v-divider>
     </v-row>
   </v-container>
 </template>
@@ -171,7 +84,7 @@ const classes = ref([
 }
 
 .class-filter-icon {
-  width: 80px;
+  width: 50px;
 }
 
 .spell-icon {
@@ -179,7 +92,7 @@ const classes = ref([
 }
 
 .faded-background {
-  background: rgba(0, 0, 0, 0.04);
+  background: #000000;
 }
 
 .v-slide-group__next,
@@ -227,7 +140,7 @@ const classes = ref([
   width: 70% !important;
 }
 
-.text-brownish {
-  color: #d9c8bf !important;
+.text-size-12 {
+  font-size: 11px;
 }
 </style>
