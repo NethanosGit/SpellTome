@@ -31,7 +31,7 @@
             <v-col class="d-flex flex-column h-auto align-center"
               ><img
                 class="class-filter-icon"
-                v-bind:src="'../classes/' + dndClass + '-icon.png'"
+                v-bind:src="'./img/classes/' + dndClass + '-icon.png'"
               />
               <div class="text-brownish">
                 {{ dndClass }}
@@ -116,7 +116,10 @@
               <v-expansion-panel-title>
                 <v-row class="w-100">
                   <v-col class="w-auto">
-                    <img class="spell-icon" src="./spells/eldritchblast.png" />
+                    <img
+                      class="spell-icon"
+                      v-bind:src="'./img/spells/eldritchblast.png'"
+                    />
                   </v-col>
                   <v-col class="w-auto"> Eldritch Blast </v-col>
                 </v-row>
