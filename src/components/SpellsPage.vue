@@ -1,17 +1,12 @@
 <template>
-  <v-container class="w-100 d-flex-inline">
-    <v-row class="faded-background w-auto d-flex justify-center">
+  <v-container class="w-100">
+    <v-row class="bg-transparent w-auto d-flex justify-center">
       <v-divider
         :thickness="2"
         class="border-opacity-100"
         color="red"
       ></v-divider>
-      <v-slide-group
-        :direction="horizontal"
-        v-model="selectedClass"
-        class="ma-0"
-        multiple
-      >
+      <v-slide-group :direction="horizontal" v-model="selectedClass" multiple>
         <v-slide-group-item
           v-for="dndClass in classes"
           :key="dndClass"
@@ -20,7 +15,7 @@
           <v-btn
             :color="isSelected ? '#312721' : 'transparent'"
             elevation="0"
-            class="pa-0 ma-0 h-auto rounded-2"
+            class="h-auto rounded-0"
             :border="false"
             @click="toggle"
           >
